@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Price Calculator";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Interested in learning more about the sport of Rowing? Use the price calculator below!</p>
+
+<div class="form-group">
+    <label for="hoursInput">Enter the number of hours you need:</label>
+    <input type="number" id="hoursInput" class="form-control placeholder="Enter hours" min="1" />
+    <small id="error" class="text-danger" style="display:none;">Please enter a valid positive number of hours.</small>
+
+</div>
+
+<div class="form-group">
+    <label for="rateInput">Hourly Rate ($):</label>
+    <input type="text" id="rateInput" class="form-control" value="25" readonly/>
+</div>
+
+<button id="calculateBtn" class="btn btn-primary mt-3">Calculate Total</button>
+
+<div class="form-group mt-3">
+    <label for="totalOutput">Total Cost ($):</label>
+    <input type="text" id="totalOutput" class="form-control" readonly/>
+</div>
+
+<a href="/" class="btn btn-secondary mt-4"> Back to Home</a>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="~/js/calculator.js"></script>
+}
